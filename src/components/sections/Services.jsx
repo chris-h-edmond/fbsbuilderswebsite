@@ -4,9 +4,13 @@ import BlurText from '../ui/BlurText';
 const Services = () => {
   return (
     <section id="services" className="section container" style={{ backgroundColor: 'var(--color-bg-alt)', borderRadius: 'var(--radius-xl)' }}>
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <BlurText as="h2" text="Our Capabilities" className="heading-2" delay={50} animateBy="words" direction="bottom" />
-        <BlurText as="p" text="Comprehensive solutions from blueprint to final walkthrough." className="subtitle" delay={100} animateBy="words" direction="bottom" />
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '3rem' }}>
+        <div style={{ width: '100%', marginBottom: '0.5rem' }}>
+          <BlurText as="h2" text="Our Capabilities" className="heading-2" delay={50} animateBy="words" direction="bottom" />
+        </div>
+        <div style={{ width: '100%' }}>
+          <BlurText as="p" text="Comprehensive solutions from blueprint to final walkthrough." className="subtitle" delay={100} animateBy="words" direction="bottom" />
+        </div>
       </div>
 
       <div className="network-container">
