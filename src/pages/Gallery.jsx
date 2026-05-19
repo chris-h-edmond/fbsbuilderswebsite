@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Masonry from '../components/ui/Masonry';
 import BlurText from '../components/ui/BlurText';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Gallery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const items = [
     {
       id: "1",
@@ -63,13 +66,13 @@ const Gallery = () => {
           <ArrowLeft size={16} style={{ marginRight: '0.5rem' }} /> Back to Home
         </Link>
         <div style={{ width: '100%', marginBottom: '0.5rem' }}>
-          <BlurText as="h1" text="Full Gallery" className="heading-2" delay={50} animateBy="words" direction="bottom" />
+          <BlurText as="h1" text="Our Gallery" className="heading-2" delay={50} animateBy="words" direction="bottom" />
         </div>
         <div style={{ width: '100%' }}>
           <BlurText as="p" text="Explore our complete portfolio of architectural excellence." className="subtitle" delay={100} animateBy="words" direction="bottom" />
         </div>
       </div>
-      
+
       <div style={{ width: '100%', height: '80vh', padding: '0 5%' }}>
         <Masonry
           items={items}
