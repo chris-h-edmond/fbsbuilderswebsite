@@ -181,16 +181,13 @@ img {
 .gap-6 { gap: 1.5rem; }
 .gap-8 { gap: 2rem; }
 
-/* Custom Scrollbar */
+/* Hide Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
-::-webkit-scrollbar-track {
-  background: var(--color-bg);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: var(--radius-pill);
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Specific Section Styles */

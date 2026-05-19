@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import BlurText from '../ui/BlurText';
 
 const Projects = () => {
@@ -96,7 +97,12 @@ const Projects = () => {
     <section id="projects" className="section" style={{ paddingLeft: '5%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem', paddingRight: '5%' }}>
         <div>
-          <BlurText as="h2" text="Featured Projects" className="heading-2" delay={50} animateBy="words" direction="bottom" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '0.5rem' }}>
+            <BlurText as="h2" text="Selected Works" className="heading-2" delay={50} animateBy="words" direction="bottom" />
+            <Link to="/gallery" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+              View Full Gallery <ArrowRight size={16} style={{ marginLeft: '0.5rem' }}/>
+            </Link>
+          </div>
           <BlurText as="p" text="A selection of our finest architectural work." className="subtitle" delay={100} animateBy="words" direction="bottom" />
         </div>
         <div style={{ display: 'flex', gap: '1rem' }}>
@@ -119,7 +125,7 @@ const Projects = () => {
                 <div className="project-label">{proj.location}</div>
                 <div className="project-details">
                   <p>{proj.details}</p>
-                  <button className="btn btn-outline" style={{ marginTop: '1rem', borderColor: 'white', color: 'white', padding: '0.5rem 1rem', fontSize: '0.85rem' }}>View Gallery <ArrowRight size={14} style={{ marginLeft: '0.5rem' }}/></button>
+                  <Link to="/gallery" className="btn btn-outline" style={{ marginTop: '1rem', borderColor: 'white', color: 'white', padding: '0.5rem 1rem', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>View Gallery <ArrowRight size={14} style={{ marginLeft: '0.5rem' }}/></Link>
                 </div>
               </div>
             </div>
